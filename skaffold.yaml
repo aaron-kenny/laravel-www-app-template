@@ -1,0 +1,52 @@
+apiVersion: skaffold/v2beta12
+kind: Config
+build:
+  local:
+    push: false
+  artifacts:
+  - image: laravel-www
+    context: .
+    docker:
+      dockerfile: Dockerfile
+      buildArgs:
+        COMPOSER_OPTIONS: '--no-scripts --no-progress --ignore-platform-reqs'
+    sync:
+      manual:
+      - src: '*'
+        dest: /var/www/html/
+      - src: 'app/**/*'
+        dest: /var/www/html/
+      - src: 'bootstrap/**/*'
+        dest: /var/www/html/
+      - src: 'config/**/*'
+        dest: /var/www/html/
+      - src: 'database/**/*'
+        dest: /var/www/html/
+      - src: 'public/**/*'
+        dest: /var/www/html/
+      - src: 'resources/views/**/*'
+        dest: /var/www/html/
+      - src: 'routes/**/*'
+        dest: /var/www/html/
+deploy:
+  kubeContext: docker-desktop
+  kubectl:
+    manifests:
+    - ../laravel-www-env-template/kubernetes/dev/*.yaml
+profiles:
+- name: prod
+  build:
+    local:
+      push: true
+    artifacts:
+    - image: INSERT_PATH_TO_PRODUCTION_REPO/laravel-www
+      context: .
+      docker:
+        dockerfile: Dockerfile
+        buildArgs:
+          COMPOSER_OPTIONS: '--no-dev --no-scripts --no-progress --ignore-platform-reqs --optimize-autoloader'
+  deploy:
+    kubeContext: INSERT_KUBE_CONTEXT
+    kubectl:
+      manifests:
+      - ../laravel-www-env/kubernetes/prod/*.yaml

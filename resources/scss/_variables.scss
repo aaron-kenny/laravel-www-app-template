@@ -1,0 +1,340 @@
+html {
+    --bg-1: rgb(234, 234, 234); // footer and darker elements
+    --bg-2: rgb(236, 236, 236); // body alt
+    --bg-3: rgb(240, 240, 240); // body
+    --bg-4: rgb(244, 244, 244); // code blocks / cards / footers / objects on body backgrounds
+    --bg-5: rgb(248, 248, 248); // card headers / 2nd level objects on bg-4
+
+    --heading-font: 'Roboto', sans-serif;
+    --heading-color: rgb(80, 80, 80);
+    --text-font: 'Roboto', sans-serif;
+    --text-color: rgb(127, 127, 127);
+    --text-muted-color: rgb(180, 180, 180);
+    --text-light-bg-color: rgb(80, 80, 80);
+    --text-dark-bg-color: rgb(180, 180, 180);
+    --link-color: rgb(80, 80, 80);
+    --link-hover-color: rgb(30, 30, 30);
+
+    --hero-title-color: rgb(180, 180, 180);
+    --hero-text-color: rgb(127, 127, 127);
+    --hero-card-bg: rgb(248, 248, 248);
+    --hero-card-header-bg: rgb(240, 240, 240);
+
+    --code-font: 'Roboto Mono', monospace;
+    --code-color: rgb(72, 72, 72);
+    --code-bg: var(--bg-4);
+    --pre-color: rgb(72, 72, 72);
+    --pre-bg: var(--bg-4);
+    --mark-bg: var(--bg-4);
+    --blockquote-color: var(--heading-color);
+    --blockquote-border-color: var(--heading-color);
+    --blockquote-footer-color: var(--text-color);
+    --border-color: rgb(220, 220, 220);
+    --hr-color: rgb(220, 220, 220);
+
+    --fill-1: var(--heading-color);
+    --fill-2: var(--text-color);
+    --fill-3: var(--text-muted-color);
+    
+    --accordion-button-bg: rgb(235, 235, 235);
+    --accordion-button-hover-bg: rgb(231, 231, 231);
+    --accordion-button-color: var(--text-color);
+    --accordion-button-icon-color: var(--text-color);
+    --accordion-body-bg: rgb(242, 242, 242);
+
+    --alert-primary-bg: rgb(60, 60, 60);
+    --alert-primary-color: rgb(210, 210, 210);
+    --alert-primary-heading-color: rgb(210, 210, 210);
+    --alert-primary-link-color: rgb(230, 230, 230);
+    --alert-primary-close-bg: rgb(230, 230, 230);
+    --alert-primary-close-hover-bg: rgb(237, 237, 237);
+    
+    --alert-success-bg: rgb(206, 217, 197);
+    --alert-success-color: rgb(115, 143, 93);
+    --alert-success-heading-color: rgb(115, 143, 93);
+    --alert-success-link-color: rgb(103, 127, 83);
+    --alert-success-close-bg: rgb(103, 127, 83);
+    --alert-success-close-hover-bg: rgb(95, 118, 77);
+    
+    --alert-error-bg: rgb(214, 166, 171);
+    --alert-error-color: rgb(137, 64, 71);
+    --alert-error-heading-color: rgb(137, 64, 71);
+    --alert-error-link-color: rgb(120, 56, 62);
+    --alert-error-close-bg: rgb(120, 56, 62);
+    --alert-error-close-hover-bg: rgb(109, 51, 57);
+
+    --badge-bg: rgb(230, 230, 230);
+    --badge-color: var(--heading-color);
+
+    --breadcrumb-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M7 21L14.9 3H17L9.1 21H7Z' /></svg>");
+    --breadcrumb-icon-color: rgb(128, 128, 128);
+
+    --btn-color: rgb(100, 100, 100);
+    --btn-hover-bg: rgb(234, 234, 234);
+    --btn-hover-color: rgb(100, 100, 100);
+
+    --btn-primary-bg: rgb(70, 70, 70);
+    --btn-primary-hover-bg: rgb(60, 60, 60);
+    --btn-primary-color: rgb(210, 210, 210);
+    --btn-primary-hover-color: rgb(210, 210, 210);
+    --btn-primary-light-bg-bg: rgb(70, 70, 70);
+    --btn-primary-light-bg-hover-bg: rgb(60, 60, 60);
+    --btn-primary-light-bg-color: rgb(210, 210, 210);
+    --btn-primary-light-bg-hover-color: rgb(210, 210, 210);
+    --btn-primary-dark-bg-bg: rgb(200, 200, 200);
+    --btn-primary-dark-bg-hover-bg: rgb(250, 250, 250);
+    --btn-primary-dark-bg-color: rgb(50, 50, 50);
+    --btn-primary-dark-bg-hover-color: rgb(50, 50, 50);
+    
+    --btn-secondary-bg: rgb(234, 234, 234);
+    --btn-secondary-hover-bg: rgb(228, 228, 228);
+    --btn-secondary-color: rgb(100, 100, 100);
+    --btn-secondary-hover-color: rgb(100, 100, 100);
+    --btn-secondary-light-bg-bg: rgb(234, 234, 234);
+    --btn-secondary-light-bg-hover-bg: rgb(228, 228, 228);
+    --btn-secondary-light-bg-color: rgb(100, 100, 100);
+    --btn-secondary-light-bg-hover-color: rgb(100, 100, 100);
+    --btn-secondary-dark-bg-bg: rgb(50, 50, 50);
+    --btn-secondary-dark-bg-hover-bg: rgb(80, 80, 80);
+    --btn-secondary-dark-bg-color: rgb(200, 200, 200);
+    --btn-secondary-dark-bg-hover-color: rgb(230, 230, 230);
+
+    --btn-danger-bg: rgb(181, 97, 105);
+    --btn-danger-hover-bg: rgb(172, 81, 89);
+    --btn-danger-color: rgb(210, 210, 210);
+    --btn-danger-hover-color: rgb(210, 210, 210);
+
+    --btn-theme-toggle-icon-bg: rgb(128, 128, 128);
+    --btn-theme-toggle-hover-icon-bg: rgb(50, 50, 50);
+    --btn-theme-toggle-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M2 12A10 10 0 0 0 15 21.54A10 10 0 0 1 15 2.46A10 10 0 0 0 2 12Z' /></svg>");
+
+    --btn-menu-toggle-icon-bg: rgb(128, 128, 128);
+    --btn-menu-toggle-hover-icon-bg: rgb(50, 50, 50);
+    --btn-menu-toggle-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z' /></svg>");
+
+    --btn-close-bg: rgb(128, 128, 128);
+    --btn-close-hover-bg: rgb(50, 50, 50);
+    --btn-close-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z' /></svg>");
+    
+    --card-solid-bg: var(--bg-4);
+    --card-solid-header-bg: var(--bg-5);
+    --card-solid-footer-bg: var(--bg-5);
+
+    --card-highlight-color: rgb(60, 60, 60);
+    --card-highlight-title-color: rgb(210, 210, 210);
+
+    --dropdown-menu-bg: var(--bg-3);
+    --dropdown-link-hover-bg: var(--bg-2);
+    
+    --form-control-color: var(--text-color);
+    --form-control-placeholder-color: rgb(180, 180, 180);
+    --form-control-border-color: rgb(220, 220, 220);
+    --form-control-focus-border-color: rgb(180, 180, 180);
+    --form-control-file-button-bg: rgb(230, 230, 230);
+    --form-control-hover-file-button-bg: rgb(220, 220, 220);
+    --form-control-file-button-color: var(--text-color);
+    
+    --form-control-solid-bg: var(--bg-5);
+    --form-control-solid-focus-bg: rgb(250, 250, 250);
+    
+    --form-select-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path fill='rgb(128, 128, 128)' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>");
+    --form-check-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'  viewBox='0 0 24 24'><path fill='rgb(128, 128, 128)' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /></svg>");
+    
+    --form-radio-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='rgb(128, 128, 128)'/></svg>");
+    --form-radio-solid-bg: rgb(230, 230, 230);
+    
+    --form-switch-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgb(180, 180, 180)'/></svg>");
+    --form-switch-checked-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgb(128, 128, 128)'/></svg>");
+    
+    --form-input-group-bg: rgb(230, 230, 230);
+    
+    --form-invalid-bg: rgb(181, 97, 105);
+    --form-invalid-color: rgb(206, 171, 174);
+
+    --modal-content-bg: var(--bg-4);
+    --modal-header-bg: var(--bg-5);
+    --modal-backdrop-bg: var(--bg-2);
+
+    --navigation-bg: var(--bg-3);
+    --navigation-link-color: var(--text-color);
+    --navigation-link-active-color: var(--heading-color);
+    --navigation-link-hover-color: var(--heading-color);
+    --navigation-link-active-border-color: var(--heading-color);
+    --mobile-navigation-link-hover-bg: var(--bg-2);
+    --mobile-navigation-dropdown-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>");
+    --mobile-navigation-dropdown-icon-color: rgb(128, 128, 128);
+    --mobile-navigation-overlay-bg: rgb(20, 20, 20);
+
+    --pagination-item-bg: rgb(200, 200, 200);
+    --pagination-item-hover-bg: rgb(180, 180, 180);
+    --pagination-item-active-bg: rgb(180, 180, 180);
+    --pagination-item-color: var(--text-color);
+    --pagination-item-hover-color: var(--heading-color);
+
+    --progress-bg: var(--bg-5);
+    --progress-bar-bg: rgb(60, 60, 60);
+    --progress-bar-color: var(--text-muted-color);
+
+    --table-color: var(--text-color);
+    --table-border-color: var(--border-color);
+    --table-head-th-color: var(--heading-color);
+    --table-bg: transparent;
+    --table-hover-bg: var(--bg-1);
+
+    --toast-bg: var(--bg-4);
+    --toast-header-bg: var(--bg-5);
+    --toast-header-color: var(--heading-color);
+
+    --tooltip-arrow-color: rgb(60, 60, 60);
+    --tooltip-bg: rgb(60, 60, 60);
+    --tooltip-color: var(--text-muted-color);
+
+    --transition-hover-border-color: var(--heading-color);
+}
+
+html.dark {
+    --bg-1: rgb(28, 28, 28); // footer and darker elements
+    --bg-2: rgb(29, 29, 29); // body alt
+    --bg-3: rgb(30, 30, 30); // body
+    --bg-4: rgb(33, 33, 33); // code blocks / cards / footers / objects on body backgrounds
+    --bg-5: rgb(35, 35, 35); // card headers / 2nd level objects on bg-4
+
+    --heading-color: rgb(180, 180, 180);
+    --text-muted-color: rgb(80, 80, 80);
+    --link-color: rgb(180, 180, 180);
+    --link-hover-color: rgb(248, 248, 248);
+
+    --code-color: rgb(180, 180, 180);
+    --pre-color: rgb(180, 180, 180);
+
+    --border-color: rgb(36, 36, 36);
+    --hr-color: rgb(36, 36, 36);
+
+    --hero-card-bg: rgb(32, 32, 32);
+    --hero-card-header-bg: rgb(35, 35, 35);
+
+    --accordion-button-bg: rgb(32, 32, 32);
+    --accordion-button-hover-bg: rgb(33, 33, 33);
+    --accordion-body-bg: rgb(31, 31, 31);
+
+    --alert-primary-bg: rgb(220, 220, 220);
+    --alert-primary-color: rgb(80, 80, 80);
+    --alert-primary-heading-color: rgb(80, 80, 80);
+    --alert-primary-link-color: rgb(80, 80, 80);
+    --alert-primary-close-bg: rgb(80, 80, 80);
+    --alert-primary-close-hover-bg: rgb(60, 60, 60);
+
+    --badge-bg: rgb(38, 38, 38);
+    
+    --btn-color: rgb(150, 150, 150);
+    --btn-hover-bg: rgb(35, 35, 35);
+    --btn-hover-color: rgb(150, 150, 150);
+
+    --btn-primary-bg: rgb(200, 200, 200);
+    --btn-primary-hover-bg: rgb(220, 220, 220);
+    --btn-primary-color: rgb(80, 80, 80);
+    --btn-primary-hover-color: rgb(80, 80, 80);
+
+    --btn-secondary-bg: rgb(35, 35, 35);
+    --btn-secondary-hover-bg: rgb(36, 36, 36);
+    --btn-secondary-color: rgb(150, 150, 150);
+    --btn-secondary-hover-color: rgb(150, 150, 150);
+
+    --btn-theme-toggle-hover-icon-bg: rgb(200, 200, 200);
+    --btn-theme-toggle-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M3.55,18.54L4.96,19.95L6.76,18.16L5.34,16.74M11,22.45C11.32,22.45 13,22.45 13,22.45V19.5H11M12,5.5A6,6 0 0,0 6,11.5A6,6 0 0,0 12,17.5A6,6 0 0,0 18,11.5C18,8.18 15.31,5.5 12,5.5M20,12.5H23V10.5H20M17.24,18.16L19.04,19.95L20.45,18.54L18.66,16.74M20.45,4.46L19.04,3.05L17.24,4.84L18.66,6.26M13,0.55H11V3.5H13M4,10.5H1V12.5H4M6.76,4.84L4.96,3.05L3.55,4.46L5.34,6.26L6.76,4.84Z' /></svg>");
+
+    --btn-menu-toggle-hover-icon-bg: rgb(200, 200, 200);
+
+    --btn-close-hover-bg: rgb(200, 200, 200);
+
+    --card-highlight-color: rgb(220, 220, 220);
+    --card-highlight-title-color: rgb(80, 80, 80);
+
+    --dropdown-link-hover-bg: rgb(31, 31, 31);
+
+    --form-control-color: var(--text-color);
+    --form-control-placeholder-color: rgb(60, 60, 60);
+    --form-control-border-color: rgb(40, 40, 40);
+    --form-control-focus-border-color: rgb(60, 60, 60);
+    --form-control-file-button-bg: rgb(40, 40, 40);
+    --form-control-hover-file-button-bg: rgb(45, 45, 45);
+
+    --form-control-solid-focus-bg: rgb(37, 37, 37);
+    --form-control-solid-disabled-bg: rgb(33, 33, 33);
+
+    --form-switch-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgb(80, 80, 80)'/></svg>");
+
+    --form-input-group-bg: rgb(38, 38, 38);
+
+    --mobile-navigation-link-hover-bg: rgb(31, 31, 31);
+
+    --pagination-item-bg: rgb(50, 50, 50);
+    --pagination-item-hover-bg: rgb(80, 80, 80);
+    --pagination-item-active-bg: rgb(80, 80, 80);
+    --pagination-item-hover-color: rgb(230, 230, 230);
+
+    --progress-bar-bg: rgb(200, 200, 200);
+
+    --tooltip-arrow-color: rgb(200, 200, 200);
+    --tooltip-bg: rgb(200, 200, 200);
+}
+
+$spacers: (
+    0: 0,
+    1: .25rem,
+    2: .5rem,
+    3: .75rem,
+    4: 1rem,
+    5: 1.25rem,
+    6: 1.5rem,
+    7: 1.75rem,
+    8: 2rem,
+    9: 3rem,
+    10: 4rem,
+    11: 5rem,
+    12: 6rem,
+    13: 8rem,
+    14: 10rem,
+    15: 12rem,
+    16: 16rem
+);
+
+$negative-spacers: negativify-map($spacers);
+
+$grid-columns: 12;
+$grid-gutter-width: 1.5rem;
+$grid-row-columns: 6;
+
+$gutters: $spacers;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+);
+
+$escaped-characters: (
+    ("<","%3c"),
+    (">","%3e"),
+    ("#","%23"),
+    ("(","%28"),
+    (")","%29"),
+);
+
+$aspect-ratios: (
+    "1x1": 100%,
+    "4x3": calc(3 / 4 * 100%),
+    "16x9": calc(9 / 16 * 100%),
+    "21x9": calc(9 / 21 * 100%)
+);

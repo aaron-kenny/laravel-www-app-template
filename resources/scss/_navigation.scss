@@ -1,0 +1,168 @@
+.primary-navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--navigation-bg);
+    padding: .5rem 0;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+    transition: background-color 300ms, padding 300ms;
+    > .container,
+    > .container-fluid {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.primary-navigation-group {
+    display: flex;
+    align-items: center;
+}
+
+.primary-navigation-menu-button {
+    display: inline-block;
+    margin-right: .5rem;
+    @include media-breakpoint-up(lg) {
+        display: none;
+    }
+}
+
+.primary-navigation-logo-wrapper {
+    margin-right: 1.25rem;
+    img {
+        display: block;
+        max-height: 16px;
+    }
+}
+
+.primary-navigation-links-wrapper {
+    display: none;
+    @include media-breakpoint-up(lg) {
+        display: flex;
+    }
+    > a {
+        display: block;
+        background-color: transparent;
+        font-size: .875rem;
+        color: var(--navigation-link-color);
+        font-weight: 500;
+        text-align: left;
+        padding: .844rem 1rem;
+        text-decoration: none;
+        border: 0;
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+        &:hover,
+        &:focus {
+            color: var(--navigation-link-hover-color);
+            text-decoration: none;
+        }
+        &.active {
+            color: var(--navigation-link-active-color);
+            border-color: var(--navigation-link-active-border-color) !important;
+        }
+    }
+}
+
+.primary-navigation-avatar-button {
+    height: 48px;
+    width: 48px;
+    background: none;
+    border: none;
+    img {
+        max-height: 36px;
+        border-radius: 50%;
+    }
+}
+
+.primary-navigation-login {
+    font-size: .875rem;
+    padding: .719rem .5rem;
+    @include media-breakpoint-up(lg) {
+        padding: .719rem 1.5rem;
+    }
+}
+
+.mobile-navigation {
+    position: fixed;
+    top: 0;
+    width: 256px;
+    height: 100%;
+    flex-direction: column;
+    background-color: var(--navigation-bg);
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1040;
+    transform: translate3d(-257px, 0, 0);
+    transition: transform 300ms ease;
+    &.is-visible {
+        transform: translate3d(0, 0 , 0);
+    }
+}
+
+.mobile-navigation-header {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    img {
+        max-height: 1rem;
+    }
+}
+
+.mobile-navigation-menu {
+    > a {
+        display: block;
+        font-size: .875rem;
+        color: var(--navigation-link-color);
+        font-weight: 500;
+        padding: .844rem 1rem;
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+        &:hover,
+        &:focus {
+            background-color: var(--mobile-navigation-link-hover-bg);
+            color: var(--navigation-link-hover-color);
+        }
+        &.active {
+            color: var(--navigation-link-active-color);
+            border-color: var(--navigation-link-active-border-color) !important;
+        }
+    }
+    .nav-dropdown {
+        display: flex;
+        &::after {
+            flex-shrink: 0;
+            width: 1.25rem;
+            height: 1.25rem;
+            background-color: var(--mobile-navigation-dropdown-icon-color);
+            margin-left: auto;
+            content: "";
+            mask-image: var(--mobile-navigation-dropdown-icon);
+            mask-repeat: no-repeat;
+            mask-size: 28px;
+            mask-position: center;
+            transition: transform 200ms ease-in-out;
+        }
+    }
+}
+
+.mobile-navigation-overlay {
+    position: absolute;
+    background-color: var(--mobile-navigation-overlay-bg);
+    opacity: 0;
+    z-index: 1039;
+    transition: opacity 300ms;
+    &.is-visible {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: .5;
+    }
+}
